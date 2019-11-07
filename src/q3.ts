@@ -35,3 +35,4 @@ class Bird extends Animal {
 let bird1 = new Bird('Jimmy', 'black');
 
 bird1.eat();
+bird1.fly();
