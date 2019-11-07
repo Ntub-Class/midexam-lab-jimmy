@@ -4,9 +4,30 @@
 // 輸出說明: 請直接console.log出答案
 // 提示: String.includes, String.split
 
-
 let calc = function (calcString: string) {
+    if (calcString.includes("+")) {
+        let digital = calcString.split('+');
+        let ans = parseInt(digital[0]) + parseInt(digital[1]);
+        console.log(`${calcString} =`, ans);
+    }
 
+    if (calcString.includes("-")) {
+        let digital = calcString.split('-');
+        let ans = parseInt(digital[0]) - parseInt(digital[1]);
+        console.log(`${calcString} =`, ans);
+    }
+
+    if (calcString.includes("*")) {
+        let digital = calcString.split('*');
+        let ans = parseInt(digital[0]) * parseInt(digital[1]);
+        console.log(`${calcString} =`, ans);
+    }
+
+    if (calcString.includes("/")) {
+        let digital = calcString.split('/');
+        let ans = parseInt(digital[0]) / parseInt(digital[1]);
+        console.log(`${calcString} =`, ans);
+    }
 }
 
 calc('8*2')

@@ -5,7 +5,18 @@
 // 輸出說明: 請直接console.log出是否合法
 
 let checkId = function (id: string) {
+    if (id.length !== 3 || id.substr(0,1) === '0') {
+        console.log(`${id}:不合法`);
+        return ;
+    }
 
+    let ans = (parseInt(id.charAt(0)) * 10) + (parseInt(id.charAt(1)) * 9) + (parseInt(id.charAt(2)) * 8);
+
+    if (ans % 5) {
+        console.log(`${id}:不合法`);
+    } else {
+        console.log(`${id}:合法`);
+    }
 }
 
 checkId('425') // 不合法
